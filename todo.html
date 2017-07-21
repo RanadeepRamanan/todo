@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>todo - home</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style type="text/css">
+		
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("#btn").click(function(){
+				var licla,li_class,work;
+
+				var work=$("#work").val()
+				var r= $('<input type="button" value="Done" id="done" style="color:green;background-color:background-color:yellow;border:solid 1px;width:100px;;border:solid 1px;width:100px;"/>');
+				var s=$('<input type="button" value="x" id="cancel" style="color:red;background-color:AAA639;border:solid 1px;width:60px;"/>');
+				var span=$('<span />').attr;
+				$("ol").append(span+"<li>"+work,"   ",r,"   ",s,"</span>");
+				var n=0;
+				var n=$("li").length;
+				
+				$("#num").text(n);
+				$("#res").hide();	
+				
+				$(r).click(function(){
+					$(".sp").hide();
+				});
+
+			});
+		});
+	</script>
+</head>
+<body>
+
+	<div style="text-align: center;border:solid 1px;width: 400px;height: 450px;margin-left: 450px;margin-top: 20px;overflow-y:scroll; ">
+		<h2 style="color: #a22c6f;">Shedule your works </h2>
+		<div>
+			<input type="text" name="workname" id="work">
+			<input type="button" name="" value="ok" id="btn">
+			<br>
+			<ol style="text-align: left;">
+				
+				
+			</ol>
+			<h6 id="res">No items added </h6>
+		</div>
+	</div>
+	<div style="margin-left: 900px;background-color: #efb3c4;">
+		<h3 style="text-align: center;color: #3b2d5e;">Items in list</h3>
+		<h2 id="num" style="color: #700d3b; text-align: center;padding-top: 0px;"></h2>
+	</div>
+	<button id="clear" >Clear list</button>
+</body>
+</html>
